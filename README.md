@@ -1,6 +1,6 @@
 # calculator
 
-need do to some changes:
+need do to some changes (DONE):
 1. add error message when wrong mathematic formula entered.
 2. After press '=', 
     - if next button press is number, replace the entry box with new number
