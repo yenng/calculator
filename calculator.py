@@ -2,6 +2,8 @@ from tkinter import *
 
 # Main
 root = Tk()
+root.title('Calculator')
+root.iconbitmap('calculator.ico')
 global done
 done = 0
 
@@ -55,20 +57,20 @@ def delete():
 def clear():
     entry.delete(0, END)
     
-entry = Entry(root, width=30)
+entry = Entry(root, width=53)
 entry.grid(row=0, column=0, columnspan=4, pady=10)
 
 # Create number buttons.
-num_1 = Button(root, text="1", width=5, height=2, command=lambda: number_click("1"))
-num_2 = Button(root, text="2", width=5, height=2, command=lambda: number_click("2"))
-num_3 = Button(root, text="3", width=5, height=2, command=lambda: number_click("3"))
-num_4 = Button(root, text="4", width=5, height=2, command=lambda: number_click("4"))
-num_5 = Button(root, text="5", width=5, height=2, command=lambda: number_click("5"))
-num_6 = Button(root, text="6", width=5, height=2, command=lambda: number_click("6"))
-num_7 = Button(root, text="7", width=5, height=2, command=lambda: number_click("7"))
-num_8 = Button(root, text="8", width=5, height=2, command=lambda: number_click("8"))
-num_9 = Button(root, text="9", width=5, height=2, command=lambda: number_click("9"))
-num_0 = Button(root, text="0", width=5, height=2, command=lambda: number_click("0"))
+num_1 = Button(root, text="1", width=10, height=4, command=lambda: number_click("1"))
+num_2 = Button(root, text="2", width=10, height=4, command=lambda: number_click("2"))
+num_3 = Button(root, text="3", width=10, height=4, command=lambda: number_click("3"))
+num_4 = Button(root, text="4", width=10, height=4, command=lambda: number_click("4"))
+num_5 = Button(root, text="5", width=10, height=4, command=lambda: number_click("5"))
+num_6 = Button(root, text="6", width=10, height=4, command=lambda: number_click("6"))
+num_7 = Button(root, text="7", width=10, height=4, command=lambda: number_click("7"))
+num_8 = Button(root, text="8", width=10, height=4, command=lambda: number_click("8"))
+num_9 = Button(root, text="9", width=10, height=4, command=lambda: number_click("9"))
+num_0 = Button(root, text="0", width=10, height=4, command=lambda: number_click("0"))
 
 # Place number buttons.
 num_1.grid(row=4,column=0)
@@ -83,15 +85,15 @@ num_9.grid(row=2,column=2)
 num_0.grid(row=5,column=1)
 
 # Mathematical symbol buttons.
-add     = Button(root, text="+", width=5, height=2, command=lambda: symbol_click("+"))
-clear   = Button(root, text="c", width=5, height=2, command=clear)
-decimal = Button(root, text=".", width=5, height=2, command=lambda: symbol_click("."))
-delete  = Button(root, text="del", width=5, height=2, command=delete)
-divide  = Button(root, text="/", width=5, height=2, command=lambda: symbol_click("/"))
-equal   = Button(root, text="=", width=5, height=5, command=calculate)
-minus   = Button(root, text="-", width=5, height=2, command=lambda: symbol_click("-"))
-modulus = Button(root, text="%", width=5, height=2, command=lambda: symbol_click("%"))
-times   = Button(root, text="*", width=5, height=2, command=lambda: symbol_click("*"))
+add     = Button(root, text="+", width=10, height=4, command=lambda: symbol_click("+"))
+clear   = Button(root, text="c", width=10, height=4, command=clear)
+decimal = Button(root, text=".", width=10, height=4, command=lambda: symbol_click("."))
+delete  = Button(root, text="del", width=10, height=4, command=delete)
+divide  = Button(root, text="/", width=10, height=4, command=lambda: symbol_click("/"))
+equal   = Button(root, text="=", width=10, height=9, command=calculate)
+minus   = Button(root, text="-", width=10, height=4, command=lambda: symbol_click("-"))
+modulus = Button(root, text="%", width=10, height=4, command=lambda: symbol_click("%"))
+times   = Button(root, text="*", width=10, height=4, command=lambda: symbol_click("*"))
 
 # Place mathematical symbol buttons.
 add.grid(row=3,column=3)
